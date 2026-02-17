@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-whale-bg text-whale-text font-body antialiased;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0f1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+@layer components {
+  .card-glass {
+    @apply bg-whale-card/80 backdrop-blur-sm border border-whale-border rounded-xl;
+  }
+  .input-dark {
+    @apply w-full bg-whale-bg border border-whale-border rounded-lg px-4 py-2.5 text-whale-text placeholder-whale-muted focus:outline-none focus:border-whale-cyan focus:ring-1 focus:ring-whale-cyan/30 transition-colors font-body;
+  }
+  .btn-primary {
+    @apply bg-whale-cyan hover:bg-whale-cyan/80 text-whale-bg font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-whale-cyan/20;
+  }
+  .btn-ghost {
+    @apply text-whale-muted hover:text-whale-text hover:bg-whale-border/50 px-4 py-2 rounded-lg transition-colors;
+  }
+  .gain { @apply text-whale-gain; }
+  .loss { @apply text-whale-loss; }
+}
